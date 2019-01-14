@@ -1,6 +1,6 @@
 function AddressBook() {
 	
-	var contactList = [];
+	this.contactList = [];
 	
 }
 
@@ -19,7 +19,7 @@ function Contact(nome) {
 
 AddressBook.prototype.addContact = function (contact) {
 		
-	 this.contactList.push(contact);
+	this.contactList.push(contact);
 	 	 	 
 }
 
