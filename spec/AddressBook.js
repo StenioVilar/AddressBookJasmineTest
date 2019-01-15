@@ -28,3 +28,9 @@ AddressBook.prototype.getContact  = function (index) {
 	return this.contactList[index];
 	
 }
+
+AddressBook.prototype.deleteContact  = function (index) {
+	
+	this.contactList.splice(index,1);
+	
+}
