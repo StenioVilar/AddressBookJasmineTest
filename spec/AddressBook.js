@@ -1,6 +1,7 @@
 function AddressBook() {
 	
 	this.contactList = [];
+	this.initialComplete = false;
 	
 }
 
@@ -34,3 +35,17 @@ AddressBook.prototype.deleteContact  = function (index) {
 	this.contactList.splice(index,1);
 	
 }
+
+AddressBook.prototype.getInitialContacts  = function (cb) {
+	
+	var self = this;
+	
+	setTimeout(function() {
+		self.initialComplete = true;
+		if(cb) {
+			return cb();
+		}
+	}, 3);
+	
+}
+
